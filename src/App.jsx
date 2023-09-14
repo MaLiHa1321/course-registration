@@ -6,27 +6,60 @@ import Cards from './componenet/card/Cards'
 import { useEffect } from 'react'
 
 function App() {
-  // const [count, setCount] = useState(0)
+  
 
   const [item, setItem] = useState([])
+  const [dcard, setdcard] = useState([])
+  const [count, setCount] = useState(0)
+  const [total, setTotal] = useState(0)
+  const [credit, setCredit] = useState(0)
+
   useEffect(() =>{
     fetch('data.json')
     .then(res => res.json())
     .then(data => setItem(data))
   },[])
 
+  const handleButton = cartItem =>{
+    // console.log("button clicked" , card)
+
+  const isExits = dcard.find(item => item.id === cartItem.id)
+   if(isExits){
+    alert('alredy booked')
+    return;
+   }
+
+    const newCart = [...dcard ,cartItem]
+
+    //  after select cart  the total amount
+    let newTotal = 0;
+    newCart.forEach(item =>{
+     newTotal = newTotal + item.price;
+    })
+
+    let newCredit =0;
+    newCart.forEach(item => {
+      newCredit += item.credit_hr;
+    })
+
+    setdcard(newCart)
+    setCount(count+1);
+    setTotal(newTotal)
+    setCredit(newCredit)
+  }
+
   return (
     <div>
     <h1 className='text-center text-4xl font-bold'>Course Registration</h1>
-        <div className='flex justify-between'>
+        <div className='flex justify-evenly'>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12'>
             {
-              item.map((card,idx) => <Cards key={idx} card={card}></Cards>)
+              item.map((card,idx) => <Cards key={idx} card={card} handleButton={handleButton}></Cards>)
             }
         
           </div>
-          <div>
-          <Bookmark />
+          <div className='bg-white text-center m-3'>
+          <Bookmark dcard={dcard} total={total} credit={credit}/>
           </div>
      
    

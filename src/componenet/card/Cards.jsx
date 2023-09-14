@@ -1,7 +1,7 @@
 
 
-const Cards = ({card}) => {
-    console.log(card)
+const Cards = ({card,handleButton}) => {
+  
     const {img,title,details,credit_hr,price} = card
     return (
         <div className="my-4 bg-white p-4 rounded-lg text-center w-72">
@@ -15,7 +15,7 @@ const Cards = ({card}) => {
                 </svg></p>
                 <h2>credit hour: {credit_hr}hr</h2>
             </div>
-            <button className="btn bg-[#2F80ED] w-full p-2 rounded-lg mt-4 text-white">Select</button>
+            <button onClick={() => handleButton(card)} className="btn bg-[#2F80ED] w-full p-2 rounded-lg mt-4 text-white">Select</button>
             
             
         </div>
