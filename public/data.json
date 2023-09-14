@@ -1,0 +1,75 @@
+[
+    {
+      "id": 1,
+      "img": "https://i.ibb.co/4dsbqM0/Rectangle-2-2.png",
+      "title": "C Programming for Data Structures and Algorithms",
+      "details": "In-depth C programming course focusing on data structures and algorithms. Learn to implement and optimize key data structures.",
+      "credit_hr": 3,
+      "price": 199.99
+    },
+    {
+      "id": 2,
+      "img": "https://i.ibb.co/HpRsGdn/Rectangle-2-3.png",
+      "title": "Algorithm Design and Analysis",
+      "details": "Advanced course in algorithm design and analysis. Explore algorithms for sorting, searching, and graph theory.",
+      "credit_hr": 4,
+      "price": 249.99
+    },
+    {
+      "id": 3,
+      "img": "https://i.ibb.co/Ss9nTK4/Rectangle-2-4.png",
+      "title": "C++ Programming for Data Structures and Algorithms",
+      "details": "Comprehensive C++ programming course tailored for data structures and algorithms. Cover topics like STL and dynamic programming.",
+      "credit_hr": 2,
+      "price": 149.99
+    },
+    {
+      "id": 4,
+      "img": "https://i.ibb.co/JKZXwv5/Rectangle-2.png",
+      "title": "Data Structures and Algorithms in Python",
+      "details": "Learn data structures and algorithms in Python, including trees, graphs, and dynamic programming.",
+      "credit_hr": 3,
+      "price": 199.99
+    },
+    {
+      "id": 5,
+      "img": "https://i.ibb.co/SJBR4Wn/Rectangle-3.png",
+      "title": "Data structure Essentials",
+      "details": "Introduction to Data structure principles and practices, covering cloud providers and deployment models.",
+      "credit_hr": 4,
+      "price": 249.99
+    },
+    {
+      "id": 6,
+      "img": "https://i.ibb.co/XWjK4gg/Rectangle-2-5.png",
+      "title": "Software Engineering Fundamentals",
+      "details": "Foundations of software engineering, including software development methodologies, project management, and quality assurance.",
+      "credit_hr": 2,
+      "price": 149.99
+    },
+    {
+      "id": 7,
+      "img": "https://i.ibb.co/Mgbt97M/Rectangle-3-1.png",
+      "title": "AWS Cloud Computing Solutions",
+      "details": "Explore Amazon Web Services (AWS) cloud computing solutions, including EC2, S3, and Lambda.",
+      "credit_hr": 3,
+      "price": 199.99
+    },
+    {
+      "id": 8,
+      "img": "https://i.ibb.co/TRBm7Cm/Rectangle-2-1.png",
+      "title": "Database Management and Design",
+      "details": "Comprehensive course on database management and design, covering SQL, NoSQL, and database modeling.",
+      "credit_hr": 2,
+      "price": 149.99
+    },
+    {
+      "id": 9,
+      "img": "https://i.ibb.co/T8SVHdp/Rectangle-2-6.png",
+      "title": "Problem Solving and Algorithmic Thinking",
+      "details": "Develop problem-solving skills and algorithmic thinking through real-world problem-solving scenarios.",
+      "credit_hr": 2,
+      "price": 149.99
+    }
+  ]
+  
