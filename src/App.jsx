@@ -13,6 +13,7 @@ function App() {
   const [count, setCount] = useState(0)
   const [total, setTotal] = useState(0)
   const [credit, setCredit] = useState(0)
+  const [remaing, setRemaing] = useState(0)
 
   useEffect(() =>{
     fetch('data.json')
@@ -42,16 +43,27 @@ function App() {
       newCredit += item.credit_hr;
     })
 
-    setdcard(newCart)
-    setCount(count+1);
-    setTotal(newTotal)
-    setCredit(newCredit)
+    const remaings = 20 - newCredit;
+    if(newCredit > 20){
+      alert('you have select more then 20 credits')
+      return;
+    }
+    
+    else{
+      setdcard(newCart)
+      setCount(count+1);
+      setTotal(newTotal)
+      setCredit(newCredit)
+      setRemaing(remaings)
+    }
+
+   
   }
 
   return (
     <div>
-    <h1 className='text-center text-4xl font-bold'>Course Registration</h1>
-        <div className='flex justify-evenly'>
+    <h1 className='text-center text-4xl font-bold mb-12'>Course Registration</h1>
+        <div className='flex justify-evenly gap-8'>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12'>
             {
               item.map((card,idx) => <Cards key={idx} card={card} handleButton={handleButton}></Cards>)
@@ -59,7 +71,7 @@ function App() {
         
           </div>
           <div className='bg-white text-center m-3'>
-          <Bookmark dcard={dcard} total={total} credit={credit}/>
+          <Bookmark dcard={dcard} total={total} credit={credit} remaing={remaing}/>
           </div>
      
    
