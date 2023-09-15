@@ -15,7 +15,12 @@ const Cards = ({card,handleButton}) => {
                 </svg></p>
                 <h2>credit hour: {credit_hr}hr</h2>
             </div>
-            <button onClick={() => handleButton(card)} className="btn bg-[#2F80ED] w-full p-2 rounded-lg mt-4 text-white">Select</button>
+            <div className="">
+            <button onClick={() => handleButton(card)}
+             className="btn bg-[#2F80ED] w-full p-2 rounded-lg mt-10 text-white bottom-0">Select</button>
+
+            </div>
+           
             
             
         </div>
