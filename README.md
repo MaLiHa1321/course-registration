@@ -1,8 +1,10 @@
-# React + Vite
+# Project overview
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+#### Fetures of my project
+ Basically its a course registration project.Online course registration refers to the process of enrolling in educational courses offered by institutions, organizations, or platforms through the internet. It has become increasingly popular due to its convenience and accessibility.
 
-Currently, two official plugins are available:
+Here is my project features:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- User can select their preferred course by select button 
+- User can see the price and credit hour in the **Course Name** cart
+- User can select only 20 credit from overall courses
