@@ -7,13 +7,12 @@ import { useEffect } from 'react'
 
 function App() {
   
-
   const [item, setItem] = useState([])
   const [dcard, setdcard] = useState([])
   const [count, setCount] = useState(0)
   const [total, setTotal] = useState(0)
   const [credit, setCredit] = useState(0)
-  const [remaing, setRemaing] = useState(0)
+  const [remaing, setRemaing] = useState(20)
 
   useEffect(() =>{
     fetch('data.json')
@@ -23,6 +22,9 @@ function App() {
 
   const handleButton = cartItem =>{
     // console.log("button clicked" , card)
+   
+  
+
 
   const isExits = dcard.find(item => item.id === cartItem.id)
    if(isExits){
@@ -43,15 +45,16 @@ function App() {
       newCredit += item.credit_hr;
     })
 
+    // set the remaining value
     const remaings = 20 - newCredit;
     if(newCredit > 20){
       alert('you have select more then 20 credits')
       return;
     }
-    
+
     else{
+     setCount(count)
       setdcard(newCart)
-      setCount(count+1);
       setTotal(newTotal)
       setCredit(newCredit)
       setRemaing(remaings)
@@ -63,26 +66,21 @@ function App() {
   return (
     <div>
     <h1 className='text-center text-4xl font-bold mb-12'>Course Registration</h1>
-        <div className='flex justify-evenly gap-8'>
+        <div className='flex flex-col lg:flex-row justify-evenly gap-8'>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12'>
             {
-              item.map((card,idx) => <Cards key={idx} card={card} handleButton={handleButton}></Cards>)
+              item.map((card) => <Cards key={card.id} card={card} handleButton={handleButton}></Cards>)
             }
         
           </div>
           <div className='bg-white text-center m-3'>
-          <Bookmark dcard={dcard} total={total} credit={credit} remaing={remaing}/>
+          <Bookmark dcard={dcard} total={total} credit={credit} remaing={remaing} count={count}/>
           </div>
      
    
 
         </div>
     
-
-    
-        {/* <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button> */}
      
     </div>
   )

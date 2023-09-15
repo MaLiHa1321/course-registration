@@ -10,15 +10,18 @@ const Bookmark = ({dcard,count,total,credit,remaing}) => {
             </div>
             <div>
             <h1 className="text-2xl font-bold my-4">Course Name </h1>
+            <ol> {
+               dcard.map((cart,idx) => <Dcard key={idx} cart={cart} count={idx + 1}></Dcard>)
+           }</ol>
+        
+         
            
-           {
-               dcard.map((cart,idx) => <Dcard key={idx} cart={cart} count={count}></Dcard>)
-           }
+           
 
           <hr className="my-4"/>
-           <p>Total Credit Hour : {credit} hr</p>
+           <p className="text-xl font-bold">Total Credit Hour : {credit} hr</p>
           <hr className="my-4"/>
-          <p>Total Price:{total} TK</p>
+          <p className="text-xl font-bold">Total Price: $ {total}</p>
 
             </div>
           

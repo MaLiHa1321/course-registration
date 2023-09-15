@@ -4,7 +4,7 @@ const Cards = ({card,handleButton}) => {
   
     const {img,title,details,credit_hr,price} = card
     return (
-        <div className="my-4 bg-white p-4 rounded-lg text-center w-72">
+        <div className="my-4 bg-white p-4 rounded-lg text-center w-72 ">
             <img src={img} alt="" />
             <h1 className="text-xl font-bold m-4">{title}</h1>
             <p>{details}</p>
