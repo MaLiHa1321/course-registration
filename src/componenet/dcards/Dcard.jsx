@@ -1,4 +1,4 @@
-
+import PropTypes from 'prop-types';
 
 const Dcard = ({cart, count}) => {
   
@@ -18,5 +18,9 @@ const Dcard = ({cart, count}) => {
         </div>
     );
 };
+Dcard.propTypes={
+    cart: PropTypes.array.isRequired,
+    count: PropTypes.func.isRequired
+}
 
 export default Dcard;

@@ -1,7 +1,8 @@
+import PropTypes from 'prop-types';
 import Dcard from "../dcards/Dcard";
 
 
-const Bookmark = ({dcard,count,total,credit,remaing}) => {
+const Bookmark = ({dcard,total,credit,remaing}) => {
     
     return (
         <div>
@@ -30,5 +31,12 @@ const Bookmark = ({dcard,count,total,credit,remaing}) => {
         </div>
     );
 };
+Bookmark.propTypes ={
+    dcard: PropTypes.array.isRequired,
+    count: PropTypes.number.isRequired,
+    total: PropTypes.func.isRequired,
+    credit: PropTypes.func.isRequired,
+    remaing: PropTypes.func.isRequired
+}
 
 export default Bookmark;
