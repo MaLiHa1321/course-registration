@@ -1,43 +1,44 @@
 # Project overview
 
 #### Fetures of my project
- Basically its a course registration project.Online course registration refers to the process of enrolling in educational courses offered by institutions, organizations, or platforms through the internet. It has become increasingly popular due to its convenience and accessibility.
+ Basically its a course registration project.The process of enrolling in educational courses provided by institutions, organizations, or platforms on the internet is referred to as online course registration.Since the student is responsible for interacting with the course rather than just showing up to class on a scheduled day and time, online courses help students learn better time management skills. As a result of its accessibility and convenience, it has grown in popularity.
 
 Here is my project features:
 
-- User can select their preferred course by select button 
-- User can see the price and credit hour in the **Course Name** cart
-- User can select only 20 credit from overall courses
+- User can select their preferred course by select button.
+- User can see the price and credit hour in the **Course Name** cart.
+- User can select only 20 credit from overall courses.
 
 #### Discussion on state management in my project
 
  State defined as  an object that represents the data that a component needs to keep track of. State is used to store information that can be used to render the user interface, respond to user interactions, and manage the component's behavior over time.
 
- Here i used total if six state using the useState hook:
+ Here I used total Of six state using the useState hook:
 
  - **Item**: 
- 
- This state is initialized as an empty array [] and is intended to hold data fetched from the 'data.json' file.
 
+ This state is initialized with an empty array and it is used to hold data that fetch from fake api data.
+ 
  - **Dcard**:
- 
-  This state is initialized as an empty array [] and is intended to hold the selected courses or items that the user has added to their shopping cart.
 
- - **Count**: 
+ This state is initialization with empty array and it is used to hold and the selected course that the user has added their cart.
  
- This state is initialized with a value of 0 and is meant to keep track of the count of selected courses in the shopping cart.
+ - **Count**:
 
+ This state is initialization with a value of 0 and it is used to keep track of the count with the selected item that the user has added their cart.
+ 
  - **Total**: 
- 
- This state is initialized with a value of 0 and is used to keep track of the total price of the selected courses in the shopping cart.
 
+ This state is initialization with a value of 0 and it is used to keep track of the total price that the user selected course in the cart.
+ 
  - **Credit**:
- 
-  This state is initialized with a value of 0 and is used to keep track of the total credit hours of the selected courses in the shopping cart.
 
- - **Remaing**: 
+ This state is initialization with a value of 0 and it is used to keep track of the total credit hours that the user selected course in the cart. 
  
- This state is initialized with a value of 20 and represents the remaining credit hours available for course selection. It decrements as the user adds courses to the cart, ensuring they do not exceed a total of 20 credit hours.
+ - **Remaing**: 
+
+ This state is initialization with a value of 20 and used to represent the remainig credit hour avaliable which is conduct by total credit hours.
+ 
 
  **useEffect**:
 
